@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Añadimos el nuevo campo al formulario de Grupos de clientes -->
+    <preference for="Magento\Customer\Block\Adminhtml\Group\Edit\Form"
+                type="Beself\Welcome\Block\Adminhtml\Group\Edit\Form"/>
+    <!-- Modificamos la lógica para guardar el nuevo campo en la misma tabla de customer_group -->
+    <preference for="Magento\Customer\Controller\Adminhtml\Group\Save"
+                type="Beself\Welcome\Controller\Adminhtml\Group\Save"/>
+    <preference for="Magento\Customer\Model\ResourceModel\GroupRepository"
+                type="Beself\Welcome\Model\ResourceModel\GroupRepository"/>
+    <!-- Getters y Setters -->
+    <preference for="Magento\Customer\Model\Data\Group"
+                type="Beself\Welcome\Model\Data\Group"/>
+</config>
