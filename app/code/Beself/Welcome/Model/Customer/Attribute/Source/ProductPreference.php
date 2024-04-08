@@ -21,4 +21,15 @@ class ProductPreference extends AbstractSource
             ['value' => 3, 'label' => __('Yoga y pilates')],
         ];
     }
+
+    public function getProductPreferenceLabel($id)
+    {
+        foreach ($this->getAllOptions() as $option)
+        {
+            if ($option['value'] == $id) {
+                return $option['label']->__toString();
+            }
+        }
+        return '';
+    }
 }
