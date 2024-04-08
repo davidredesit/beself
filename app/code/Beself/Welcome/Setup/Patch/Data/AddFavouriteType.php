@@ -59,7 +59,9 @@ class AddFavouriteType implements DataPatchInterface
                 'visible' => true,
                 'position' => 100,
                 'system' => false,
-                'backend' => ''
+                'backend' => '',
+                'is_used_in_grid' => true,
+                'is_visible_in_grid' => true,
             ]
         );
 
