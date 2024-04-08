@@ -7,7 +7,8 @@
 namespace Beself\Welcome\Model\Data;
 
 /**
- * Customer Group data model.
+ * Extensión del modelo de grupo de clientes.
+ * De esta manera reconocerá el get y set del nuevo "atributo"
  */
 class Group extends \Magento\Customer\Model\Data\Group
 {

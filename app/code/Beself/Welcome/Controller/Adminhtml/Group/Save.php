@@ -11,7 +11,7 @@ use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Framework\App\ObjectManager;
 
 /**
- * Controller class Save. Performs save action of customers group
+ * Reescribimos el método execute para que así almacene la información del nuevo atributo
  */
 class Save extends \Magento\Customer\Controller\Adminhtml\Group implements HttpPostActionInterface
 {

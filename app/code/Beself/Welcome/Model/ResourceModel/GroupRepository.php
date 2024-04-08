@@ -21,6 +21,10 @@ use Magento\Tax\Api\TaxClassManagementInterface;
 use Magento\Framework\Api\ExtensibleDataInterface;
 use Magento\Customer\Api\Data\GroupExtensionInterface;
 
+/**
+ * Decidimos modificar el repositorio para que gestione el nuevo atributo.
+ * Otra opción hubiera sido usar extended_attributes, pero también tenía complicaciones.
+ */
 class GroupRepository implements \Magento\Customer\Api\GroupRepositoryInterface
 {
     /**

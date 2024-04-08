@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <columns name="customer_group_columns">
+        <!-- Listamos en el grid de grupos el nuevo atributo -->
         <column name="is_b_to_b" component="Magento_Ui/js/grid/columns/select">
             <settings>
                 <label translate="true">Is B2B</label>

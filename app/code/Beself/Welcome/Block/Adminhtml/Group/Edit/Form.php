@@ -8,7 +8,7 @@ use Magento\Framework\App\ObjectManager;
 use Magento\Store\Model\System\Store as SystemStore;
 
 /**
- * Adminhtml customer groups edit form
+ * Añadimos al form de - crear nuevo / editar grupo - el campo necesario para este desarrollo
  */
 class Form extends \Magento\Backend\Block\Widget\Form\Generic
 {
@@ -183,7 +183,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic
             $form->addValues($this->_backendSession->getCustomerGroupData());
             $this->_backendSession->setCustomerGroupData(null);
         } else {
-            // TODO: need to figure out how the DATA can work with forms
             $form->addValues(
                 [
                     'id' => $customerGroup->getId(),

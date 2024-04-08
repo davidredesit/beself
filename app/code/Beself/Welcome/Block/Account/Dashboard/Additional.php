@@ -8,6 +8,9 @@ use Magento\Framework\View\Element\Template\Context;
 use Magento\Customer\Helper\Session\CurrentCustomer;
 use Beself\Welcome\Model\Customer\Attribute\Source\ProductPreference;
 
+/**
+ * Con este bloque alimentamos el template, con los datos del cliente logueado
+ */
 class Additional extends Template
 {
     public function __construct(

@@ -9,6 +9,9 @@ use Magento\Eav\Model\Entity\Attribute\SetFactory as AttributeSetFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
+/**
+ * Creación del atributo de cliente
+ */
 class AddFavouriteType implements DataPatchInterface
 {
     /** @var ModuleDataSetupInterface */
@@ -39,8 +42,11 @@ class AddFavouriteType implements DataPatchInterface
 
     /**
      * Instalación de atributo de cliente con su source
+     *  y otras opciones para que sea visible desde el grid
      *
-     * @return $this
+     * @return $this|AddFavouriteType
+     * @throws \Magento\Framework\Exception\LocalizedException
+     * @throws \Magento\Framework\Validator\ValidateException
      */
     public function apply()
     {

@@ -5,6 +5,11 @@ namespace Beself\Welcome\Model\Customer\Attribute\Source;
 
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 
+/**
+ * Decidimos usar un source como origen de datos del atributo,
+ * ya que es sencillo de mantener y según el enunciado no era necesario que los
+ * datos fueran editables por los usuarios.
+ */
 class ProductPreference extends AbstractSource
 {
     /**
@@ -22,6 +27,12 @@ class ProductPreference extends AbstractSource
         ];
     }
 
+    /**
+     * Método que dado un id devuelve su label
+     *
+     * @param $id
+     * @return string
+     */
     public function getProductPreferenceLabel($id)
     {
         foreach ($this->getAllOptions() as $option)
